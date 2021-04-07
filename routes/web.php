@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('anasayfa');
+    return view('anasayfa', ['isim'=> 'Ali']);
 });
 
 
