@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/hello/{name}', function ($name) {
     return "Hello $name";
 });
+
+Route::get('/hello/{name?}', function ($name="user") {
+    return "Hello $name";
+});
