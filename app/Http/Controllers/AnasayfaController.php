@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class AnasayfaController extends Controller
 {
     public function index(){
-        return view('anasayfa', ['isim'=>'Busra']);
+        $isim = 'Busra';
+        $soyisim = 'Alkan';
+        return view('anasayfa', compact('isim', 'soyisim'));
     }
 }
