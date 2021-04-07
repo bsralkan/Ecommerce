@@ -30,3 +30,6 @@ Route::get('/hello/{name?}', function ($name="user") {
 Route::get('/deneme', function ($name="user") {
     return redirect()->route('with_optional_parameter', ['name' => 'Busra']);
 });
+
+
+Route::get('/anasayfa', 'AnasayfaController@index');
