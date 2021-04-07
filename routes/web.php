@@ -24,4 +24,9 @@ Route::get('/hello/{name}', function ($name) {
 
 Route::get('/hello/{name?}', function ($name="user") {
     return "Hello $name";
+})->name("with_optional_parameter");
+
+
+Route::get('/deneme', function ($name="user") {
+    return redirect()->route('with_optional_parameter', ['name' => 'Busra']);
 });
