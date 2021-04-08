@@ -44,7 +44,10 @@
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                     <div class="text-center text-sm text-gray-500 sm:text-left">
                         <div class="flex items-center">
-                            {{$isim . ' ' . $soyisim}} {{$yas}}
+                           <p> {{$isim . ' ' . $soyisim}} {{$yas}} </p>
+                            @foreach($isimler as $is)
+                                <p>{{$is . ($is !== end($isimler) ? ',' : '')}}</p>
+                            @endforeach
                         </div>
                     </div>
 

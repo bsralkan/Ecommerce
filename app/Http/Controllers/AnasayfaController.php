@@ -9,6 +9,7 @@ class AnasayfaController extends Controller
     public function index(){
         $isim = 'Busra';
         $soyisim = 'Alkan';
-        return view('anasayfa') -> with(['isim'=> $isim, 'soyisim' => $soyisim]);
+        $isimler = ['Busra', 'Fatma', 'Hatice'];
+        return view('anasayfa', compact('isim', 'soyisim', 'isimler'));
     }
 }

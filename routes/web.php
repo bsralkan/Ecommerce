@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('anasayfa', ['isim'=> 'Ali']);
-});
-
 
 Route::get('/hello/{name}', function ($name) {
     return "Hello $name";
@@ -32,4 +28,4 @@ Route::get('/deneme', function ($name="user") {
 });
 
 
-Route::get('/anasayfa', 'AnasayfaController@index');
+Route::get('/', 'AnasayfaController@index');
