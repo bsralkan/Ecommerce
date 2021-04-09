@@ -1,2 +1,2 @@
 <hr>
-Laravel Eticaret &copy 2021
+Laravel Eticaret &copy {{$yil}}

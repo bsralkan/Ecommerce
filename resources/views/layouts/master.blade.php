@@ -10,6 +10,6 @@
 <body>
 @include('layouts.partials.navbar')
 @yield('content')
-@include('layouts.partials.footer')
+@include('layouts.partials.footer', ['yil'=>2021])
 </body>
 </html>
