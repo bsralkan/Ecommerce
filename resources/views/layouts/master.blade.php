@@ -8,13 +8,8 @@
     <title>@yield('title', config('app.name'))</title>
 </head>
 <body>
-<a href="/">Anasayfa</a>
-<a href="/kategori">Kategori</a>
-<a href="/urun">Ürün</a>
-<a href="/sepet">Sepet</a>
-<hr>
+@include('layouts.partials.navbar')
 @yield('content')
-<hr>
-Laravel Eticaret
+@include('layouts.partials.footer')
 </body>
 </html>
