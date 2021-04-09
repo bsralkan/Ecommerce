@@ -29,3 +29,13 @@ Route::get('/deneme', function ($name="user") {
 
 
 Route::get('/', 'AnasayfaController@index');
+
+Route::get('/kategori', function (){
+    return view('kategori');
+});
+Route::get('/urun', function (){
+    return view('urun');
+});
+Route::get('/sepet', function (){
+    return view('sepet');
+});
