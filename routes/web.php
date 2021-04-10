@@ -14,28 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/hello/{name}', function ($name) {
-    return "Hello $name";
-});
-
-Route::get('/hello/{name?}', function ($name="user") {
-    return "Hello $name";
-})->name("with_optional_parameter");
-
-
-Route::get('/deneme', function ($name="user") {
-    return redirect()->route('with_optional_parameter', ['name' => 'Busra']);
-});
-
 
 Route::get('/', 'AnasayfaController@index');
 
-Route::get('/kategori', function (){
-    return view('kategori');
-});
-Route::get('/urun', function (){
-    return view('urun');
-});
-Route::get('/sepet', function (){
-    return view('sepet');
-});
+Route::get('/kategori/{slug_kategoriadi}', 'KategoriController@index')->name('kategori');
+Route::get('/urun/{slug_urunadi}','UrunController@index')->name('urun');
+Route::get('/sepet','SepetController@index')->name('sepet');
+Route::get('/odeme','OdemeController@index')->name('odeme');
+Route::get('/siparisler','SiparisController@index')->name('siparisler');
+Route::get('/siparisler/{id}','SiparisController@detay')->name('siparis');
+Route::get('/kullanici/oturumac','KullaniciController@giris_form')->name('kullanici.oturumac');
+Route::get('/kullanici/kaydol','KullaniciController@kaydol_form')->name('kullanici.kaydol');
